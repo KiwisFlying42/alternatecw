@@ -225,7 +225,7 @@ set_popularities = {
 	communism = 88
 }
 
-create_faction = Comintern
+create_faction = "Warsaw Pact"
 add_to_faction = SOV
 add_to_faction = MON
 add_to_faction = DDR

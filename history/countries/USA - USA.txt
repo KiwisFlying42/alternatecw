@@ -118,7 +118,7 @@ give_guarantee = CHL
 give_guarantee = PAR
 give_guarantee = ARG
 give_guarantee = URG
-give_guarantee = WGR
+give_guarantee = GER
 
 1939.1.1 = {
 
@@ -278,9 +278,7 @@ add_to_faction = ENG
 add_to_faction = FRA
 add_to_faction = POR
 add_to_faction = ITA
-add_to_faction = WGR
-add_to_faction = SPR
-add_to_faction = RAJ
+add_to_faction = GER
 add_to_faction = GRE
 add_to_faction = TUR
 add_to_faction = CAN

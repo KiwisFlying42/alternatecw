@@ -144,12 +144,6 @@ set_convoys = 40
 		}
 	}
 	
-	set_global_flag = fall_of_nanjing
-	create_faction = chinese_united_front
-	add_to_faction = PRC
-	remove_opinion_modifier = { target = PRC modifier = hostile_status }
-	#load_oob = "CHI_united_front"
-	set_global_flag = CHI_unite
 	
 	oob = "CHI_1939"
 	if = {
@@ -213,6 +207,14 @@ set_popularities = {
 	communism = 30
 	fascism = 5
 }
+
+create_faction = "United Asian Coalltion"
+add_to_faction = CHI
+add_to_faction = KOR
+add_to_faction = TIB
+add_to_faction = JAP
+add_to_faction = PHI
+
 
 create_country_leader = {
 	name = "Chiang Kai-Shek"
