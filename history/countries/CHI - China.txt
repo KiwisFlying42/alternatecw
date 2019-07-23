@@ -208,7 +208,7 @@ set_popularities = {
 	fascism = 5
 }
 
-create_faction = "United Asian Coalltion"
+create_faction = "United Asian Coaltion"
 add_to_faction = CHI
 add_to_faction = KOR
 add_to_faction = TIB

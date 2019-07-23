@@ -189,10 +189,8 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 15
-	fascism = 10
 	communism = 15
-	neutrality = 60
+	neutrality = 85
 }
 
 1939.1.1 = {
@@ -203,10 +201,8 @@ set_popularities = {
 		elections_allowed = yes
 	}
 	set_popularities = {
-		democratic = 10
-		fascism = 20
-		communism = 10
-		neutrality = 60
+		communism = 30
+		neutrality = 70
 	}
 }
 set_stability = 0.6

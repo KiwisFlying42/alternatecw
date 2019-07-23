@@ -4,7 +4,7 @@ bookmarks = {
 		desc = "BLITZKRIEG_DESC"
 		date = 1985.1.1.12
 		picture = "GFX_select_date_1939"
-		default_country = "USA"
+		default_country = "GER"
 	
 		FRA = {
 			history = FRA_BLITZKRIEG_DESC
@@ -92,6 +92,7 @@ bookmarks = {
 			focuses = {
 				JAP_the_zero
 				JAP_warrior_spirit
+				JAP_strike_on_the_southern_resource_area
 			}		
 		}
 		SOV = {
