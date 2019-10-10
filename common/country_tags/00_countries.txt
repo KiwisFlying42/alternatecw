@@ -182,8 +182,16 @@ SLV = "countries/Slovenia.txt"
 BOS = "countries/Bosnia.txt"
 MAC = "countries/Macedonia.txt"
 NIR = "countries/Northern Ireland.txt"
-###############################################
+#NATIONS#
 UWA = "countries/United West Africa.txt"
 RSA = "countries/South Africa.txt"
 CKR = "countries/Democratic Peoples' Republic of Korea.txt"
 IND = "countries/India.txt"
+CGR = "countries/North Greece.txt"
+SLK = "countries/Slovakia.txt"
+#SSRs#
+BSR = "countries/BalticSSR.txt"
+CSR = "countries/CaucusSSR.txt"
+KSR = "countries/KazahkSSR.txt"
+USR = "countries/UkraineSSR.txt"
+MSR = "countries/MoldovanSSR.txt"
