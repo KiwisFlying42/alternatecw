@@ -1,11 +1,11 @@
 autonomy_state = {
-	id = autonomy_soviet_satellite
+	id = autonomy_unitednations_protectorate
 	
 	is_puppet = yes
 
 	min_freedom_level = 0.90
 	
-	manpower_influence = 0.6
+	manpower_influence = 0.2
 	
 	rule = {
 		can_not_declare_war = no
@@ -13,9 +13,9 @@ autonomy_state = {
 	}
 	
 	modifier = {
-		autonomy_manpower_share = 0.7
-		extra_trade_to_overlord_factor = 0.4
-		overlord_trade_cost_factor = -0.4
+		autonomy_manpower_share = 0.2
+		extra_trade_to_overlord_factor = 0.5
+		overlord_trade_cost_factor = -0.6
 		license_subject_master_purchase_cost = -1
 		autonomy_gain_global_factor = 0.05
 	}
@@ -25,16 +25,11 @@ autonomy_state = {
 	}
 	
 	ai_overlord_wants_lower = {
-		factor = 1.0
+		factor = 0.5
 	}
 
 	ai_overlord_wants_garrison = {
 		always = yes
-	}
-
-	allowed = {
-		has_government = communism
-		OVERLORD = { original_tag = SOV }
 	}
 	
 	can_take_level = {

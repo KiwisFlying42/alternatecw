@@ -1,0 +1,912 @@
+focus_tree = {
+	id = EGY
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EGY
+		}
+	}
+	#Focus for Millitary infrastructure
+	focus = {
+		id = EGY_millitaryinfrastructure
+		icon = GFX_goal_generic_construction2
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_millitarybuildup }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Create the Arabian Social Pact
+	focus = {
+		id = EGY_createthearabiansocialpact
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_spreadourownrevolution }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_faction= "Arabian Social Pact"
+		}
+	}
+
+	#Focus for Anti-Monarchism
+	focus = {
+		id = EGY_antimonarchism
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 18
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_thearabdemocraticcouncil }
+		mutually_exclusive = { focus = EGY_ademocraticking }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = monarchism
+popularity = -0.05
+}
+		}
+	}
+
+	#Focus for Revolutionaries against the revolution
+	focus = {
+		id = EGY_revolutionariesagainsttherevolution
+		icon = GFX_goal_generic_attack_allies
+		x = 26
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_anewegyptianempire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= -0.1
+add_popularity= { 
+ideology = fascism 
+popularity = 0.1
+}
+add_popularity= { 
+ideology = nationalsocalism
+popularity = 0.5
+}
+		}
+	}
+
+	#Focus for A Nationalist King
+	focus = {
+		id = EGY_anationalistking
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 25
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_bringbacktheking 
+		}
+		prerequisite = { 
+			focus = EGY_revolutionariesagainsttherevolution 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bring back the King
+	focus = {
+		id = EGY_bringbacktheking
+		icon = GFX_goal_unknown
+		x = 22
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_thedaysofthekingdom }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Join the Budapest Defense Pact
+	focus = {
+		id = EGY_jointhebudapestdefensepact
+		icon = GFX_goal_support_communism
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_northernrelations }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SOV = {
+country_event= {
+days = 1 
+id = risingheat.1 
+}
+}
+		}
+	}
+
+	#Focus for Spread our own revolution
+	focus = {
+		id = EGY_spreadourownrevolution
+		icon = GFX_goal_support_communism
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_theironfist }
+		mutually_exclusive = { focus = EGY_northernrelations }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier= { 
+target = SOV
+modifier = hostile_status 
+}
+add_war_support = 0.05
+		}
+	}
+
+	#Focus for Embrace the western markets
+	focus = {
+		id = EGY_embracethewesternmarkets
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 13
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_revitalizetheeconomy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Israeli independence
+	focus = {
+		id = EGY_israeliindependence
+		icon = GFX_focus_generic_self_management
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_stateautonomy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			release_puppet= ISR
+		}
+	}
+
+	#Focus for Millitary buildup
+	focus = {
+		id = EGY_millitarybuildup
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_createthearabiansocialpact 
+			focus = EGY_rapidindustrialization 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Northern relations
+	focus = {
+		id = EGY_northernrelations
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_theironfist }
+		mutually_exclusive = { focus = EGY_spreadourownrevolution }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation= { 
+country = SOV
+relation = non_aggression_pact 
+}
+		}
+	}
+
+	#Focus for Civilian industry improvement
+	focus = {
+		id = EGY_civilianindustryimprovement
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 9
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_stateautonomy 
+			focus = EGY_rapidindustrialization 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Rapid Industrialization
+	focus = {
+		id = EGY_rapidindustrialization
+		icon = GFX_goal_generic_production
+		x = 7
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_authoritarianism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for State autonomy
+	focus = {
+		id = EGY_stateautonomy
+		icon = GFX_goal_generic_improve_relations
+		x = 11
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_liberalism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.1
+		}
+	}
+
+	#Focus for A new Egyptian Empire
+	focus = {
+		id = EGY_anewegyptianempire
+		icon = GFX_goal_support_fascism
+		x = 26
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_politicalspring }
+		mutually_exclusive = { focus = EGY_democraticideals }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = fascism 
+popularity = 0.05
+}
+add_popularity= { 
+ideology = nationalsocialism
+popularity = 0.05
+}
+		}
+	}
+
+	#Focus for Focus on Aircraft Design
+	focus = {
+		id = EGY_focusonaircraftdesign
+		icon = GFX_focus_chi_flying_tigers
+		x = 30
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_mastersoftheair }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fighters
+	focus = {
+		id = EGY_fighters
+		icon = GFX_goal_generic_air_fighter2
+		x = 29
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_focusonaircraftdesign }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bombers
+	focus = {
+		id = EGY_bombers
+		icon = GFX_goal_poland_goal
+		x = 31
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_focusonaircraftdesign }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Expand the missile program
+	focus = {
+		id = EGY_expandthemissileprogram
+		icon = GFX_focus_rocketry
+		x = 33
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_antiairdefenses }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Ultimate Deterrent
+	focus = {
+		id = EGY_theultimatedeterrent
+		icon = GFX_focus_wonderweapons
+		x = 36
+		y = 6
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_expandthemissileprogram 
+		}
+		prerequisite = { 
+			focus = EGY_bombers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 1
+uses = 2 
+category = nukes 
+}
+		}
+	}
+
+	#Focus for Join NATO
+	focus = {
+		id = EGY_joinnato
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 21
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_ademocraticking 
+			focus = EGY_antimonarchism 
+		}
+		mutually_exclusive = { focus = EGY_pactwithiran }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Investment in Air Bases
+	focus = {
+		id = EGY_investmentinairbases
+		icon = GFX_focus_usa_escort_fighters
+		x = 32
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_mastersoftheair }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Anti-Air Defenses
+	focus = {
+		id = EGY_antiairdefenses
+		icon = GFX_goal_generic_air_bomber
+		x = 32
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_syrianartillery 
+		}
+		prerequisite = { 
+			focus = EGY_investmentinairbases 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Arabian Blitzkrieg
+	focus = {
+		id = EGY_thearabianblitzkrieg
+		icon = GFX_focus_generic_license_production
+		x = 41
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_palestinearmour }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Iraq Quesion
+	focus = {
+		id = EGY_theiraqquesion
+		icon = GFX_goal_generic_major_war
+		x = 26
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_anationalistking }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = IRQ
+}
+		}
+	}
+
+	#Focus for The Arab Democratic Council
+	focus = {
+		id = EGY_thearabdemocraticcouncil
+		icon = GFX_goal_generic_national_unity
+		x = 18
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_democraticideals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Masters of the air
+	focus = {
+		id = EGY_mastersoftheair
+		icon = GFX_goal_generic_air_fighter2
+		x = 31
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_restorationofourarmedforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ground forces
+	focus = {
+		id = EGY_groundforces
+		icon = GFX_goal_generic_small_arms
+		x = 37
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_restorationofourarmedforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Naval power
+	focus = {
+		id = EGY_navalpower
+		icon = GFX_goal_generic_navy_battleship
+		x = 43
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_restorationofourarmedforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Palestine armour
+	focus = {
+		id = EGY_palestinearmour
+		icon = GFX_goal_continuous_armor_production
+		x = 40
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_groundforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Revitalize the economy
+	focus = {
+		id = EGY_revitalizetheeconomy
+		icon = GFX_goal_generic_consumer_goods
+		x = 13
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_liberalism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Authoritarianism
+	focus = {
+		id = EGY_authoritarianism
+		icon = GFX_goal_continuous_suppression
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_thesocialistway }
+		mutually_exclusive = { focus = EGY_liberalism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = communism
+popularity = 0.1 
+}
+add_war_support= 0.05
+add_stability= 0.1
+		}
+	}
+
+	#Focus for Political Spring
+	focus = {
+		id = EGY_politicalspring
+		icon = GFX_goal_tripartite_pact
+		x = 22
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = EGY_thesocialistway }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 300
+add_stability= -0.05
+		}
+	}
+
+	#Focus for The Socialist Way
+	focus = {
+		id = EGY_thesocialistway
+		icon = GFX_goal_generic_war_with_comintern
+		x = 9
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = EGY_politicalspring }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = communism 
+popularity = 0.05
+}
+add_popularity= { 
+ideology = socialism
+popularity = 0.05
+}
+add_political_power= 250
+add_stability= 0.05
+		}
+	}
+
+	#Focus for Liberalism
+	focus = {
+		id = EGY_liberalism
+		icon = GFX_goal_generic_territory_or_war
+		x = 12
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_thesocialistway }
+		mutually_exclusive = { focus = EGY_authoritarianism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = democraticsocialism
+popularity = 0.05
+}
+add_popularity= { 
+ideology = socialism
+popularity = 0.1 
+}
+add_stability= 0.05
+		}
+	}
+
+	#Focus for The Iron Fist
+	focus = {
+		id = EGY_theironfist
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_authoritarianism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05
+add_war_support= 0.05
+		}
+	}
+
+	#Focus for Democratic Ideals
+	focus = {
+		id = EGY_democraticideals
+		icon = GFX_goal_support_democracy
+		x = 18
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_politicalspring }
+		mutually_exclusive = { focus = EGY_anewegyptianempire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = democraticliberalism
+popularity = 0.05
+}
+add_popularity= { 
+ideology = democraticsocialism
+popularity = 0.05
+}
+		}
+	}
+
+	#Focus for The Days of The Kingdom
+	focus = {
+		id = EGY_thedaysofthekingdom
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 22
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_politicalspring }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = monarchism 
+popularity = 0.1 
+}
+		}
+	}
+
+	#Focus for Restoration of our armed forces
+	focus = {
+		id = EGY_restorationofourarmedforces
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 37
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			air_experience= 25
+army_experience= 25
+navy_experience= 25
+		}
+	}
+
+	#Focus for Egyptian guns
+	focus = {
+		id = EGY_egyptianguns
+		icon = GFX_focus_secret_rearmament
+		x = 37
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_groundforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Syrian artillery
+	focus = {
+		id = EGY_syrianartillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 34
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_groundforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Democratic King
+	focus = {
+		id = EGY_ademocraticking
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 22
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_bringbacktheking 
+		}
+		prerequisite = { 
+			focus = EGY_thearabdemocraticcouncil 
+		}
+		mutually_exclusive = { focus = EGY_antimonarchism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Pact with Iran
+	focus = {
+		id = EGY_pactwithiran
+		icon = GFX_goal_generic_military_deal
+		x = 24
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = EGY_anationalistking 
+			focus = EGY_ademocraticking 
+		}
+		mutually_exclusive = { focus = EGY_joinnato }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_faction= "Arab-Iranian Cooperative Pact"
+add_to_faction= PER
+		}
+	}
+
+	#Focus for Light Weapons
+	focus = {
+		id = EGY_lightweapons
+		icon = GFX_goal_generic_army_artillery2
+		x = 37
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_egyptianguns }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Heavy Bombers
+	focus = {
+		id = EGY_heavybombers
+		icon = GFX_goal_poland_goal
+		x = 33
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_bombers }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Light Bombers
+	focus = {
+		id = EGY_lightbombers
+		icon = GFX_goal_unknown
+		x = 31
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_bombers }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Heavy Fighters
+	focus = {
+		id = EGY_heavyfighters
+		icon = GFX_goal_unknown
+		x = 29
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_fighters }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Exploit The Oil Reserves
+	focus = {
+		id = EGY_exploittheoilreserves
+		icon = GFX_goal_generic_oil_refinery
+		x = 9
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_civilianindustryimprovement }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource= { 
+type = oil 
+amount = 8 
+state = 446 
+}
+		}
+	}
+
+	#Focus for Create the United Arabian Commonwealth
+	focus = {
+		id = EGY_createtheunitedarabiancommonwealth
+		icon = GFX_goal_generic_dangerous_deal
+		x = 11
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_israeliindependence }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_faction= "United Arabian Commonwealth"
+release_puppet= JOR
+release_puppet= SYR
+		}
+	}
+
+	#Focus for Escort Fighters
+	focus = {
+		id = EGY_escortfighters
+		icon = GFX_goal_unknown
+		x = 27
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = EGY_fighters }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }

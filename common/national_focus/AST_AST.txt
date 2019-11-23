@@ -1,0 +1,61 @@
+focus_tree = {
+	id = AST
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AST
+		}
+	}
+	#Focus for Victory for the Labour Party
+	focus = {
+		id = AST_victoryforthelabourparty
+		icon = GFX_goal_tripartite_pact
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AST_1960generalelection }
+		mutually_exclusive = { focus = AST_victoryforthenationalparty }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Victory for the National Party
+	focus = {
+		id = AST_victoryforthenationalparty
+		icon = GFX_goal_tripartite_pact
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AST_1960generalelection }
+		mutually_exclusive = { focus = AST_victoryforthelabourparty }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for 1960 General Election
+	focus = {
+		id = AST_1960generalelection
+		icon = GFX_focus_usa_voter_registration_act
+		x = 12
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = australasia.1 
+}
+add_political_power= 200
+		}
+	}
+
+#End of focuses 
+ }

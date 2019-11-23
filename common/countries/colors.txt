@@ -4,8 +4,20 @@ GER = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
 }
+LBA = {
+	color = rgb { 30 150 70 }
+	color_ui = rgb { 30 150 70 }
+}
+ALG = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 57 113 228 }
+}
+MOR = {
+	color = rgb { 242  205  94 }
+	color_ui = rgb { 242  205  94 }
+}
 ENG = {
-	color = rgb { 201 56 93 }
+	color = rgb { 201  56  93 }
 	color_ui = rgb { 255 73 121 }
 }
 SOV = {
@@ -20,13 +32,18 @@ FRA = {
 	color = rgb { 57 113 228 }
 	color_ui = rgb { 74 147 255 }
 }
+SLO = {
+	color = rgb { 158  161  188 }
+	color_ui = rgb { 255 255 255 }
+}
 LUX = {
 	color = rgb { 65 175 179 }
 	color_ui = rgb { 85 228 233 }
 }
-BEL = { color 	 = rgb { 193 171 8  }
-		color_ui = rgb { 251 222 10 }
-	  }
+BEL = { 
+	color = rgb { 193 171 8  }
+	color_ui = rgb { 251 222 10 }
+}
 HOL = {	color = rgb { 203 138 74 }
 		color_ui = rgb { 255 179 96 }
 }
@@ -414,6 +431,10 @@ BLR = {
 	color = rgb { 180 220 190 }
 	color_ui = rgb { 180 220 190 }
 }
+DIZ = {
+	color = rgb { 0 162 232 }
+	color_ui = rgb { 0 162 232 }
+}
 MAN = {
 	color = rgb { 255 120 71 }
 	color_ui = rgb { 255 120 71 }
@@ -458,6 +479,14 @@ DDR = {
 KOR = {
 	color = rgb { 255  240  195 }
 	color_ui = rgb { 255 248 229 }	
+}
+KUR = {
+	color = rgb { 49 87 115 }
+	color_ui = rgb { 49 87 115 }
+}
+UEA = {
+	color = rgb { 106  100  95 } 
+	color_ui = rgb { 106  100  95 } 
 }
 ISR = {
 	color = rgb { 152  130  191 }
@@ -526,11 +555,4 @@ D14 = {
 D15 = {
 	color = rgb { 194 140 86 }
 	color_ui = rgb { 252 182 112 }
-}
-
-##########################################################################
-
-LBA = {
-	color = rgb { 30 150 70 }
-	color_ui = rgb { 33 64 50 }
 }

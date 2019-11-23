@@ -285,3 +285,15 @@ TAJ_SOV = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
 }
+MORSPR_free = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}
+ALGFRA_free = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+LBAITA_free = {
+	color = rgb { 30 150 70 }
+	color_ui = rgb { 87 165 82 }
+}
